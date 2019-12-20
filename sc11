@@ -1,0 +1,17 @@
+# taking bash as default bin
+#!/bin/bash
+
+# providing path for files to be traversed
+FILES=/home/neha/myfile/DevAuto/*
+# start for loop
+for f in $FILES
+do
+	# take action on each file. $f store current file name
+  echo "Processing $f"
+	# count of lines and the characters
+  wc $f
+  #to get the owner of the file
+  #ls -l $f
+	# counter to indicate the line numbers of the file
+  cat -n $f
+done
